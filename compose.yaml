@@ -1,0 +1,31 @@
+# Estrutura principal: o mais próximo possível de produção
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: database
+      DB_DATABASE: kubedevnews
+      DB_USERNAME: kubedevnews
+      DB_PASSWORD: "Pg#123"
+    depends_on:
+      database:
+        condition: service_healthy
+
+  database:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: kubedevnews
+      POSTGRES_USER: kubedevnews
+      POSTGRES_PASSWORD: "Pg#123"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kubedevnews -d kubedevnews"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  db-data:

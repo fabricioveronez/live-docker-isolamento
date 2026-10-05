@@ -1,0 +1,8 @@
+{
+  "name": "Kube News",
+  "dockerComposeFile": ["../compose.yaml", "compose.yaml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "node",
+  "shutdownAction": "stopCompose"
+}

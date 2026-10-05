@@ -1,0 +1,17 @@
+# Override de desenvolvimento: só o que muda em relação ao compose.yaml da raiz
+# Caminhos relativos resolvem a partir da raiz do projeto (pasta do primeiro arquivo)
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    volumes:
+      - .:/workspace
+      # Sessão do Claude Code isolada, num volume só do container
+      - claude-config:/home/node/.claude
+      # Sessão do Claude Code do host (troque pela linha acima)
+      # - ~/.claude:/home/node/.claude:ro
+
+volumes:
+  claude-config:
