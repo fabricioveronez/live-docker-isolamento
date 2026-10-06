@@ -1,5 +1,5 @@
 # Imagem de desenvolvimento: ferramentas + Claude Code, sem root
-FROM node:22
+FROM mcr.microsoft.com/devcontainers/typescript-node:22
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
       git curl less procps jq vim \

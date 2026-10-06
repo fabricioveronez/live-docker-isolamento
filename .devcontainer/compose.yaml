@@ -8,10 +8,3 @@ services:
     command: sleep infinity
     volumes:
       - .:/workspace
-      # Sessão do Claude Code isolada, num volume só do container
-      - claude-config:/home/node/.claude
-      # Sessão do Claude Code do host (troque pela linha acima)
-      # - ~/.claude:/home/node/.claude:ro
-
-volumes:
-  claude-config:

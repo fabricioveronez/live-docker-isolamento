@@ -4,5 +4,15 @@
   "service": "app",
   "workspaceFolder": "/workspace",
   "remoteUser": "node",
-  "shutdownAction": "stopCompose"
+  "postCreateCommand": "npm install --prefix src",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/stu-bell/devcontainer-features/claude-code:0": {}
+  }
 }
