@@ -1,5 +1,11 @@
 # Isolamento de agentes de IA com Docker
 
+Quer colocar IA no seu dia a dia com Cloud, DevOps e SRE? Conheça a nossa Pós-Graduação em AIOps e IA na Engenharia de Cloud. Dá uma olhada na grade e vem estudar com a gente!
+👉 https://pos.veronez.io/pos-aiops/
+
+E aproveita pra participar do nosso evento! Confira a programação e faça sua inscrição.
+👉 https://eventos.veronez.ai/aiops-producao-1
+
 Projeto da live sobre isolamento de agentes de código em dois níveis: **Dev Container** (container)
 e **Docker Sandboxes** (microVM). A aplicação é o [Kube News](https://github.com/KubeDev/kube-news):
 Node.js, Express e PostgreSQL.
